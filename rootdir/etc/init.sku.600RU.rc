@@ -1,0 +1,5 @@
+on fs
+    setprop ro.product.vendor.device DRG
+    setprop ro.product.vendor.name Dragon_00RU
+on fs
+	setprop ro.vendor.build.fingerprint Nokia/Dragon_00RU/DRG:9/PPR1.180610.011/00WW_3_30B:user/release-keys
