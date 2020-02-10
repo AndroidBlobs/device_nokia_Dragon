@@ -2,7 +2,7 @@ import /vendor/etc/init/hw/init.fingerprint.${ro.boot.fp}.rc
 #import /vendor/etc/init/hw/init.nfc.${ro.boot.nfc}.rc
 # SW4-HL-TouchPanel-BringUpILI2121-00+_20170421
 import /vendor/etc/init/hw/init.DRG.tp.rc
-import /vendor/etc/init/hw/init.c1n.fqc_audio.rc
+import /vendor/etc/init/hw/init.c1n.fqc.rc
 import /vendor/etc/init/hw/init.fih.elabel.rc
 # Jason add for ALT
 import /vendor/etc/init/hw/init.alt.rc

@@ -190,9 +190,9 @@
 
     <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -204,7 +204,7 @@
     <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -395,9 +395,9 @@
 
     <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -410,7 +410,7 @@
     <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -447,9 +447,9 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -573,32 +573,6 @@
              channels="2" />
     </EncoderProfile>
 
-	<EncoderProfile quality="2k" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="20000000"
-             width="2160"
-             height="1080"
-             frameRate="30" />
-
-      <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
-    </EncoderProfile>
-
-    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
-             frameRate="30" />
-
-      <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
-    </EncoderProfile>
-	
     <!-- TIMELAPSE profiles for front camera -->
     <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -712,34 +686,6 @@
              channels="1" />
     </EncoderProfile>
 
-	<EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="20000000"
-             width="2160"
-             height="1080"
-             frameRate="30" />
-
-      <!-- audio setting is ignored -->
-      <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
-    </EncoderProfile>
-
-	<EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
-             frameRate="30" />
-
-      <!-- audio setting is ignored -->
-      <Audio codec="aac"
-             bitRate="156000"
-             sampleRate="48000"
-             channels="2" />
-    </EncoderProfile>
-	
     <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -754,9 +700,9 @@
              channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -856,9 +802,9 @@
 
     <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -870,7 +816,7 @@
     <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -1061,9 +1007,9 @@
 
     <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -1076,7 +1022,7 @@
     <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -1113,9 +1059,9 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>
@@ -1215,9 +1161,9 @@
 
     <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -1229,7 +1175,7 @@
     <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -1420,9 +1366,9 @@
 
     <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1440"
-             height="720"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -1435,7 +1381,7 @@
     <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
-             width="2160"
+             width="2048"
              height="1080"
              frameRate="30" />
 
@@ -1472,9 +1418,9 @@
             channels="2" />
     </EncoderProfile>
 
-        <ImageEncoding quality="100" />
         <ImageEncoding quality="95" />
-        <ImageEncoding quality="85" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
         <ImageDecoding memCap="20000000" />
 
     </CamcorderProfiles>

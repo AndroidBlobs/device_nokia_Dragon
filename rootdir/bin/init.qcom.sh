@@ -84,7 +84,7 @@ start_msm_irqbalance_8939()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
-		    "239" | "293" | "294" | "295" | "304" | "338" | "313" | "353" | "354")
+		    "239" | "293" | "294" | "295" | "304" | "313" |"353")
 			start vendor.msm_irqbalance;;
 		    "349" | "350" )
 			start vendor.msm_irqbal_lb;;
@@ -92,50 +92,15 @@ start_msm_irqbalance_8939()
 	fi
 }
 
-start_msm_irqbalance_msmnile()
-{
-         if [ -f /vendor/bin/msm_irqbalance ]; then
-                start vendor.msm_irqbalance
-         fi
-}
-
-start_msm_irqbalance_kona()
-{
-         if [ -f /vendor/bin/msm_irqbalance ]; then
-                start vendor.msm_irqbalance
-         fi
-}
-
-start_msm_irqbalance_lito()
-{
-         if [ -f /vendor/bin/msm_irqbalance ]; then
-                start vendor.msm_irqbalance
-         fi
-}
-
-start_msm_irqbalance_atoll()
-{
-         if [ -f /vendor/bin/msm_irqbalance ]; then
-                start vendor.msm_irqbalance
-         fi
-}
-
-start_msm_irqbalance660()
+start_msm_irqbalance()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
 		case "$platformid" in
-		    "317" | "321" | "324" | "325" | "326" | "336" | "345" | "346" | "360" | "393")
+		    "317" | "324" | "325" | "326" | "345" | "346")
 			start vendor.msm_irqbalance;;
 		    "318" | "327" | "385")
 			start vendor.msm_irqbl_sdm630;;
 		esac
-	fi
-}
-
-start_msm_irqbalance()
-{
-	if [ -f /vendor/bin/msm_irqbalance ]; then
-			start vendor.msm_irqbalance
 	fi
 }
 
@@ -235,7 +200,7 @@ case "$target" in
                   esac
                   ;;
        esac
-        start_msm_irqbalance660
+        start_msm_irqbalance
         ;;
     "apq8084")
         platformvalue=`cat /sys/devices/soc0/hw_platform`
@@ -288,7 +253,7 @@ case "$target" in
                   ;;
         esac
         ;;
-    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "sm6150" | "trinket")
+    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "msmnile" | "talos")
         start_msm_irqbalance
         ;;
     "msm8996")
@@ -314,18 +279,6 @@ case "$target" in
         ;;
     "msm8909")
         start_vm_bms
-        ;;
-    "msmnile")
-        start_msm_irqbalance_msmnile
-        ;;
-    "kona")
-        start_msm_irqbalance_kona
-        ;;
-    "lito")
-        start_msm_irqbalance_lito
-        ;;
-    "atoll")
-        start_msm_irqbalance_atoll
         ;;
     "msm8937")
         start_msm_irqbalance_8939
@@ -406,7 +359,7 @@ case "$target" in
              hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
         case "$soc_id" in
-             "336" | "337" | "347" | "360" | "393" )
+             "336" | "337" | "347" | "360" )
                   case "$hw_platform" in
                        "Surf")
                                     setprop qemu.hw.mainkeys 0
@@ -429,13 +382,6 @@ esac
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
-echo " *** QC original Modem MCFG process bein: *** "
-echo " *** Process for MCFG ATL start: ***"
-echo " \n *** Process for MCFG ATL start: *** \n" > /data/vendor/fih_mcfg/fih_process_time
-fih_process_time=`date`
-fih_process_time_n=$(date +.%N)
-echo $fih_process_time >> /data/vendor/fih_mcfg/fih_process_time
-echo $fih_process_time_n >> /data/vendor/fih_mcfg/fih_process_time
 if [ -f /data/vendor/modem_config/ver_info.txt ]; then
     prev_version_info=`cat /data/vendor/modem_config/ver_info.txt`
 else
@@ -446,6 +392,15 @@ fi
 # add W for group recursively before delete
 chmod g+w -R /data/vendor/fih_atl/*
 chmod g+w -R /data/vendor/fih_mcfg/*
+chmod g+w -R /data/vendor/fih_atl/modem_config/*
+cur_fihmodel=`getprop ro.product.name` #`getprop ro.product.model.num`
+fihmodel=${cur_fihmodel##*_}
+if [ ! -f /data/vendor/fih_mcfg/fih_model.txt ]; then
+    echo $fihmodel > /data/vendor/fih_mcfg/fih_model.txt
+    chmod 776 /data/vendor/fih_mcfg/fih_model.txt
+    chown system.vendor_rfs /data/vendor/fih_mcfg/fih_model.txt
+fi
+#-FIH@R3J168: FEATURE_FIH_C_001_MCFG_MODEL, by Pupu
 
 cur_version_info=`cat /vendor/firmware_mnt/verinfo/ver_info.txt`
 if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
@@ -459,35 +414,28 @@ if [ ! -f /vendor/firmware_mnt/verinfo/ver_info.txt -o "$prev_version_info" != "
     # the group must be root, otherwise this script could not add "W" for group recursively
     chown -hR radio.root /data/vendor/modem_config/*
 #+FIH@R3J168: FEATURE_FIH_C_002_MCFG_ATL, by Pupu
-    # add W for group recursively before delete
-    setprop persist.vendor.radio.nokia_fih_mcfg 0
-    chmod g+w -R /data/vendor/fih_atl/modem_config/*
-    rm -rf /data/vendor/fih_atl/modem_config/*
     # preserve the read only mode for all subdir and files
     cp -dr /vendor/firmware_mnt/image/modem_pr/mcfg/configs/* /data/vendor/fih_atl/modem_config
     cp -d /vendor/firmware_mnt/verinfo/ver_info.txt /data/vendor/fih_mcfg/ver_info.txt
     cp -d /vendor/firmware_mnt/image/modem_pr/mbn_ota.txt /data/vendor/fih_mcfg/modem_config/
+    # the group must be root, otherwise this script could not add "W" for group recursively
 #-FIH@R3J168: FEATURE_FIH_C_002_MCFG_ATL, by Pupu
+#+FIH@R3J168: FEATURE_FIH_C_003_MCFG_OEM_LOCK (fix_000871)(fix_001241), by Pupu
+    echo -n > /data/vendor/fih_mcfg/fih_mcfg.lock
+    chmod 444 /data/vendor/fih_mcfg/fih_mcfg.lock
+    chown system.vendor_rfs /data/vendor/fih_mcfg/fih_mcfg.lock
+#-FIH@R3J168: FEATURE_FIH_C_003_MCFG_OEM_LOCK (fix_000871)(fix_001241), by Pupu
+
 fi
 chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
 
-setprop persist.vendor.radio.nokia_fih_mcfg 1
 #+FIH@R3J168: FEATURE_FIH_C_002_MCFG_ATL, by Pupu
 chmod 776 -R /data/vendor/fih_atl
 chown system.vendor_rfs -R /data/vendor/fih_atl
 chown radio.vendor_rfs /data/vendor/fih_mcfg/ver_info.txt
 chown system.vendor_rfs /data/vendor/fih_mcfg
 #-FIH@R3J168: FEATURE_FIH_C_002_MCFG_ATL, by Pupu
-
-echo " *** Process for MCFG ATL end. ***"
-echo " \n *** Process for MCFG ATL end *** \n" >> /data/vendor/fih_mcfg/fih_process_time
-fih_process_time=`date`
-fih_process_time_n=$(date +.%N)
-echo $fih_process_time >> /data/vendor/fih_mcfg/fih_process_time
-echo $fih_process_time_n >> /data/vendor/fih_mcfg/fih_process_time
-echo " *** QC original Modem MCFG process end. ***"
-
 
 #+FIH@R3J168: FEATURE_FIH_000C_GCF, by Tally
 cur_fihmodel=`getprop ro.product.model.num`

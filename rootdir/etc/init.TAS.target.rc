@@ -3,7 +3,7 @@ import /vendor/etc/init/hw/init.fingerprint.${ro.boot.fp}.rc
 #import /vendor/etc/init/hw/init.sat.nfc.rc
 # SW4-HL-TP-B2N-NT36672-DoubleTap-00*_20180302
 import /vendor/etc/init/hw/init.B2N.tp.rc
-import /vendor/etc/init/hw/init.b2n.fqc_audio.rc
+import /vendor/etc/init/hw/init.b2n.fqc.rc
 import /vendor/etc/init/hw/init.fih.elabel.rc
 # Jason add for ALT
 import /vendor/etc/init/hw/init.alt.rc

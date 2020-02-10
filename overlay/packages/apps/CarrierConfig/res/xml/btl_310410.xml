@@ -35,6 +35,5 @@
             <item value="-106" />
             <item value="-100" />
         </int-array>
-        <boolean name="skip_cf_fail_to_disable_dialog_bool" value="true" />
     </carrier_config>
 </carrier_config_list>
