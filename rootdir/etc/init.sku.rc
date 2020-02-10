@@ -1,8 +1,15 @@
 on fs
+    setprop ro.product.odm.brand Nokia
     setprop ro.product.vendor.brand Nokia
+    setprop ro.product.odm.name Dragon_00WW
+    setprop vendor.vidc.enc.disable.pq true
+    setprop ro.product.odm.device DRG_sprout
     setprop ro.product.vendor.name Dragon_00WW
     setprop ro.product.vendor.device DRG_sprout
+    setprop ro.product.odm.model "Nokia 6.1 Plus"
+    setprop ro.product.odm.manufacturer "HMD Global"
     setprop ro.product.vendor.model "Nokia 6.1 Plus"
     setprop ro.product.vendor.manufacturer "HMD Global"
 on fs
-	setprop ro.vendor.build.fingerprint Nokia/Dragon_00WW/DRG_sprout:9/PPR1.180610.011/00WW_3_30B:user/release-keys
+	setprop ro.vendor.build.fingerprint Nokia/Dragon_00WW/DRG_sprout:10/QKQ1.190828.002/00WW_4_10C:user/release-keys
+	setprop ro.odm.build.fingerprint Nokia/Dragon_00WW/DRG_sprout:10/QKQ1.190828.002/00WW_4_10C:user/release-keys

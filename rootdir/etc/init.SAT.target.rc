@@ -1,6 +1,6 @@
 import /vendor/etc/init/hw/init.fingerprint.${ro.boot.fp}.rc
 import /vendor/etc/init/hw/init.sat.nfc.rc
-import /vendor/etc/init/hw/init.sat.fqc.rc
+import /vendor/etc/init/hw/init.sat.fqc_audio.rc
 import /vendor/etc/init/hw/init.sat.smartamp.rc
 import /vendor/etc/init/hw/init.sat.battery.rc
 import /vendor/etc/init/hw/init.sat.lcm.rc

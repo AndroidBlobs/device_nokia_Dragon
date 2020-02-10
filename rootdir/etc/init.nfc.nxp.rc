@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+#NXP NFC hidl rc
+import /vendor/etc/init/hw/vendor.nxp.hardware.nfc@1.2-service.rc
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/nfc

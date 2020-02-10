@@ -11,4 +11,4 @@ on boot
     chmod 644 /proc/AllHWList/tp_double_tap
 
 on post-fs-data
-    mkdir /data/misc/touch 0770 system system
+    mkdir /data/vendor/misc/touch 0770 system system

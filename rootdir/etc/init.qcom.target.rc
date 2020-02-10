@@ -29,13 +29,11 @@ service wireless-init /system/vendor/bin/wireless_init -i
     oneshot
 
 #create the necessary /data/preloads directory for In-Factory APK Caching
-on post-fs-data
+on zygote-start
     mkdir /data/preloads 0775 system system
     mkdir /data/preloads/media 0775 system system
     mkdir /data/preloads/demo 0775 system system
     restorecon_recursive /data/preloads
-    mkdir /data/preloads/apps-postinstall 0775 system system
-    restorecon_recursive /data/preloads/apps-postinstall
 
 on boot
     setprop persist.vendor.sys.exif.model ${ro.product.nickname}

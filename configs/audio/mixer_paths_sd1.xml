@@ -1611,6 +1611,80 @@
     <path name="incall-rec-uplink-and-downlink-compress afe-proxy">
         <path name="incall-rec-uplink-and-downlink-compress" />
     </path>
+    <path name="incall-music-uplink">
+        <ctl name="Incall_Music Audio Mixer MultiMedia2" value="1" />
+    </path>
+
+    <path name="incall-music-uplink speaker">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink handset">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink handset-hac">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink display-port">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink bt-sco">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink bt-sco-wb">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink speaker-and-display-port">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink afe-proxy">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink usb-headphones">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink usb-headset">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink speaker-and-usb-headphones">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink headphones">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink speaker-and-headphones">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink speaker-and-bt-sco">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink voice-tty-hco-handset">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink speaker-and-bt-a2dp">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name="incall-music-uplink bt-a2dp">
+        <path name="incall-music-uplink" />
+    </path>
+
+    <path name ="voice-music-tx">
+    </path>
 
     <path name="hfp-sco">
         <ctl name="HFP_SLIM7_UL_HL Switch" value="1" />

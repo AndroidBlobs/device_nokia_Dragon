@@ -10,5 +10,6 @@
             <item value="default" />
             <item value="supl" />
         </string-array>
+        <boolean name="oem_key_diff_apn_for_home_roaming" value="true" />
     </carrier_config>
 </carrier_config_list>

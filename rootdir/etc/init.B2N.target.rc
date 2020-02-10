@@ -1,8 +1,8 @@
 import /vendor/etc/init/hw/init.fingerprint.${ro.boot.fp}.rc
-import /vendor/etc/init/hw/init.sat.nfc.rc
+import /vendor/etc/init/hw/init.nfc.${ro.boot.nfc}.rc
 # SW4-HL-TP-B2N-NT36672-DoubleTap-00*_20180302
 import /vendor/etc/init/hw/init.B2N.tp.rc
-import /vendor/etc/init/hw/init.b2n.fqc.rc
+import /vendor/etc/init/hw/init.b2n.fqc_audio.rc
 import /vendor/etc/init/hw/init.fih.elabel.rc
 # Jason add for ALT
 import /vendor/etc/init/hw/init.alt.rc
@@ -16,9 +16,6 @@ import /vendor/etc/init/hw/init.c1n.poweroff_charging.rc
 import /vendor/etc/init/hw/init.C1N.lcm.rc
 
 import /vendor/etc/init/hw/init.vibrator.rc
-
-#CP add Samsung NFC hidl rc
-import /vendor/etc/init/hw/vendor.${ro.boot.nfc}.hardware.nfc@1.1-service.rc
 
 on early-boot
         #Enable Camera ISP turbo mode for dualcam
@@ -41,3 +38,12 @@ on early-boot
        setprop persist.vendor.camera.fovc.enable 1
        #setprop persist.camera.mw.enable 1
 
+#Fih add Change Voice path to audio path
+       setprop vendor.voice.path.for.pcm.voip false
+       setprop persist.audio.fluence.voicecomm true
+
+# FIH move from init.target.rc 
+service cdsprpcd /vendor/bin/cdsprpcd
+   class main
+   user system
+   group system
