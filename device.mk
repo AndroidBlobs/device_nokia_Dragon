@@ -15,7 +15,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_pl2_cn.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_pl2_cn.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_sd1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_sd1.xml \
     $(LOCAL_PATH)/configs/audio/audio_platform_info_skush.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_skush.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_tas.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_tas.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
@@ -37,7 +36,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/mixer_paths_sd1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_sd1.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_skus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skus.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_skush.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skush.xml \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_tas.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tas.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9326.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9335.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths_wcd9340.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9340.xml \
@@ -174,7 +172,6 @@ PRODUCT_PACKAGES += \
     headset_mic_to_headset_recv_on.sh \
     init.class_main.sh \
     init.crda.sh \
-    init.drg.lcm.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -213,14 +210,12 @@ PRODUCT_PACKAGES += \
     init.SD1.target.rc \
     init.SD6.target.rc \
     init.SS2.target.rc \
-    init.TAS.target.rc \
     init.b2n.fqc.rc \
     init.c1n.fqc.rc \
     init.c1n.poweroff_charging.rc \
     init.fih.dbg.rc \
     init.fih.elabel.rc \
     init.fingerprint.elan.rc \
-    init.fingerprint.focal9362_tas.rc \
     init.fingerprint.gxfp3208_b2n.rc \
     init.fingerprint.gxfp3258_drg.rc \
     init.fingerprint.gxfp5288_c1n.rc \
@@ -246,10 +241,12 @@ PRODUCT_PACKAGES += \
     init.sat.poweroff_charging.rc \
     init.sat.smartamp.rc \
     init.sd1.fqc.rc \
-    init.sku.60SCN.rc \
+    init.sku.600ID.rc \
+    init.sku.600RU.rc \
+    init.sku.600WW.rc \
     init.sku.DGI.rc \
-    init.sku.DGT.rc \
     init.sku.DGW.rc \
+    init.sku.DRG.rc \
     init.sku.rc \
     init.target.rc \
     init.vibrator.rc \
@@ -281,7 +278,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/bdwlan_SAT_cal.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_SAT_cal.bin \
     $(LOCAL_PATH)/configs/wifi/bdwlan_SD1_cal.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_SD1_cal.bin \
     $(LOCAL_PATH)/configs/wifi/bdwlan_SS2_cal.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_SS2_cal.bin \
-    $(LOCAL_PATH)/configs/wifi/bdwlan_TAS_cal.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_TAS_cal.bin \
     $(LOCAL_PATH)/configs/wifi/bdwlan_def.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan_def.bin \
     $(LOCAL_PATH)/configs/wifi/fstman.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \

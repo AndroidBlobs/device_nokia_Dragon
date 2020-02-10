@@ -2,7 +2,7 @@ DEVICE_PATH := device/nokia/Dragon
 BOARD_VENDOR := nokia
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2019-01-01
+VENDOR_SECURITY_PATCH := 2018-11-01
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml

@@ -45,8 +45,5 @@ on early-boot
         setprop camera.ans.uvproc.int.main 20,20,20,20
         setprop camera.ans.scene.contract.main 0,0,0,0
 
-#DerekCWWu, WA for DRG whatsAPP video call
-        setprop vendor.camera.hal1.packagelist com.dw.btime,com.whatsapp
-
 #CPLai disable uicc se for DRG
         setprop persist.vendor.radio.uicc_se_enabled false

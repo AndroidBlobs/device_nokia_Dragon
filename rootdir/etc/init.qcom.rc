@@ -1260,9 +1260,6 @@ on property:vold.decrypt=trigger_restart_framework
 on property:vendor.wifi.mtu=true
     write /sys/class/net/wlan0/mtu 1440
 
-on property:vendor.wifi.mtu=false
-    write /sys/class/net/wlan0/mtu 1500
-
 # WIFI WBG
 service wbgtesttool_wifi /system/vendor/bin/sh /vendor/etc/wbg_wifi.sh
     user root

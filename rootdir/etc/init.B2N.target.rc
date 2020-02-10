@@ -41,6 +41,3 @@ on early-boot
        setprop persist.vendor.camera.fovc.enable 1
        #setprop persist.camera.mw.enable 1
 
-#Fih add Change Voice path to audio path
-       setprop vendor.voice.path.for.pcm.voip false
-

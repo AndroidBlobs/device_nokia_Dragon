@@ -70,7 +70,7 @@
         <param key="spkr_1_tz_name" value="wsatz.11"/>
         <param key="spkr_2_tz_name" value="wsatz.12"/>
         <param key="true_32_bit" value="true"/>
-        <param key="native_audio_mode" value="false"/>
+        <param key="native_audio_mode" value="true"/>
         <param key="hfp_pcm_dev_id" value="39"/>
         <param key="input_mic_max_count" value="4"/>
     </config_params>
@@ -83,7 +83,6 @@
         <device name="SND_DEVICE_IN_SPEAKER_MIC_NS" acdb_id="43"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="41"/>
         <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NS" acdb_id="43"/>
-		<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="43"/>
     </acdb_ids>
     <backend_names>
         <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="INT0_MI2S_RX"/>

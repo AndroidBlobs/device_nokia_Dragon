@@ -51,6 +51,3 @@ on early-boot
         setprop persist.camera.ffcolor.lev3 ffdcb9
         setprop persist.camera.ffcolor.th2 4500
         setprop persist.camera.ffcolor.lev2 fff3ee
-
-on property:sys.boot_completed=1
-        write /proc/sys/vm/extra_free_kbytes 51200

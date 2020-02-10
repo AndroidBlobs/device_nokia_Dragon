@@ -80,11 +80,10 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="15"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="42"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" acdb_id="23"/>
-        <device name="SND_DEVICE_IN_HANDSET_DMIC_NS" acdb_id="41"/>
-        <device name="SND_DEVICE_IN_SPEAKER_MIC_NS" acdb_id="42"/>
+		<device name="SND_DEVICE_IN_HANDSET_DMIC_NS" acdb_id="41"/>
+        <device name="SND_DEVICE_IN_SPEAKER_MIC_NS" acdb_id="43"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="41"/>
-        <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NS" acdb_id="42"/>
-		<device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="42"/>
+        <device name="SND_DEVICE_IN_SPEAKER_MIC_AEC_NS" acdb_id="43"/>
     </acdb_ids>
     <backend_names>
         <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="INT0_MI2S_RX"/>

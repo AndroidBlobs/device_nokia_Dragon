@@ -396,13 +396,13 @@ else
         configure_zram_parameters 1610612736
     elif [ "$arch_type" == "aarch64" ] && [ $MemTotal -gt 2097152 ]; then
         # for 3G devices
-        echo 30 > /sys/module/process_reclaim/parameters/pressure_min
+        echo 10 > /sys/module/process_reclaim/parameters/pressure_min
         echo 1024 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo "18432,23040,27648,32256,161280,161280" > /sys/module/lowmemorykiller/parameters/minfree
+        echo "18432,23040,27648,80640,161280,161280" > /sys/module/lowmemorykiller/parameters/minfree
         echo "0,100,200,300,800,906" > /sys/module/lowmemorykiller/parameters/adj
         #echo 100642 > /proc/sys/vm/min_free_kbytes
         echo 8 > /sys/block/zram0/max_comp_streams
-        echo 250000 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
+        echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
         echo 100 >/proc/sys/vm/swappiness
         product_name=`getprop ro.product.name`
         if [ "$product_name" = "Plate2_00WW" ]; then
